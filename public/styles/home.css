@@ -1,0 +1,59 @@
+.welcome-container {
+    width: calc(100% - 100px);
+    height: auto;
+    min-height: 120px;
+    padding: 0 50px;
+}
+
+.welcome-container.grid {
+    display: grid;
+    grid-template-columns: auto 35vw;
+    gap: 20px
+}
+
+.welcome-container .inline-grid {
+    display: inline-block;
+    padding: 20px;
+    position: relative;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    font-family: Montserrat;
+    font-weight: 400;
+    color: #000; 
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+.big-welcome-text {
+    font-size: 54px;
+    font-weight: 700;
+    text-shadow: -5px -5px #87a920;
+    color: #e3f9a1;
+}
+
+.big-intro-text {
+    font-size: 27px;
+}
+
+.intro-text {
+    font-size: 15px;
+}
+
+.horizontal-line {
+    width: 45%;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #87a920;
+    margin: 30px 0px;
+}
+
+.thumbnail-image {
+    width: 390px;
+    height: auto;
+    position: absolute;
+    box-shadow: -10px 10px 0px rgb(122 185 45);
+}
+
+.thumbnail-2 {top: 120px; left: 120px; }
+.thumbnail-3 {top: 300px; left: 20px;}

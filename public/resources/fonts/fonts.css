@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap');
+
+@font-face {
+    font-family: "Museo Sans Rounded Thin";
+    src: url(./MuseoSansRounded100.otf);
+}
+
+@font-face {
+    font-family: "Museo Sans Rounded Normal";
+    src: url(./MuseoSansRounded300.otf);
+}
+
+@font-face {
+    font-family: "Museo Sans Rounded Kinda-Thick";
+    src: url(./MuseoSansRounded500.otf);
+}
+
+@font-face {
+    font-family: "Museo Sans Rounded Fat";
+    src: url(./MuseoSansRounded700.otf);
+}
+
+@font-face {
+    font-family: "Museo Sans Rounded Massive";
+    src: url(./MuseoSansRounded900.otf);
+}
+
+@font-face {
+    font-family: "Museo Sans Rounded Momma-Thick";
+    src: url(./MuseoSansRounded1000.otf);
+}
+
+@font-face {
+    font-family: "CreatoDisplay-Black";
+    src: url(./CreatoDisplay-Black.otf);
+}
+
+@font-face {
+    font-family: "Segoe UI";
+    src: url("./Segoe UI.ttf");
+}
+
+
+:root {
+    --default-font: "Museo Sans Rounded Kinda-Thick";
+}
