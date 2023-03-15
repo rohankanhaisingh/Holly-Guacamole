@@ -52,7 +52,7 @@
                 </div>
                 <div class="navbar-vl"></div>
                 <ul class="navbar-links">
-                    <li><a href="/menu.php">Menukaart</a></li>
+                    <li><a href="/public/menu.php">Menukaart</a></li>
                     <li><a href="#">Winkelmand</a></li>
                 </ul>
             </div>
