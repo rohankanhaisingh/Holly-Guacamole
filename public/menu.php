@@ -2,12 +2,13 @@
     $serverNaam = "localhost";
     $gebruikersNaam = "frontend";
     $wachtwoord = "sussy1234";
+    $databaseNaam = "holly_guacamoly";
     
     $verbinding = mysqli_connect($serverNaam, $gebruikersNaam, $wachtwoord);
 
     if(!$verbinding) die("Kan geen verbinding maken met database server." . mysqli_error($verbinding));
 
-    $database = mysqli_select_db($verbinding, "holly guacamole");
+    $database = mysqli_select_db($verbinding, $databaseNaam);
 
     if(!$database) die("Kan geen verbinding maken met database." . mysqli_error($verbinding));
 
@@ -18,12 +19,13 @@
         $productPrijs = $product["ProductPrijs"];
         $productThumbnail = $product["ProductThumbnail"];
         $productOmschrijving = $product["ProductOmschrijving"];
+        $productType = $product["ProductType"];
                                     
 
         if(strlen($productOmschrijving) === 0) $productOmschrijving = "Er is geen omschrijving beschikbaar voor dit product.";
 
         return "
-        <div class='product-container product-item' data-id='" . $productId . "' data-name='" . $productNaam . "' data-price='" . $productPrijs . "'>
+        <div class='product-container product-item' data-type='" . $productThumbnail . "' data-id='" . $productId . "' data-name='" . $productNaam . "' data-price='" . $productPrijs . "'>
             <div class='product-item-thumbnail'>
                 <img src='./resources/images/gerechten/" . $productThumbnail . "' alt='Zoetzure kip' />
             </div>
@@ -91,12 +93,14 @@
                     <li><a href="#">Home pagina</a></li>
                     <li><a href="#">Geschiedenis</a></li>
                     <li><a href="#">Help</a></li>
-                </ul>
-                <div class="navbar-vl"></div>
-                <ul class="navbar-links">
                     <li><a href="#">Winkelmand</a></li>
                     <li><a href="#">Mijn account</a></li>
                 </ul>
+                <div class="navbar-hamburger closed">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
             </div>
 
             <div class="app-content">
@@ -160,6 +164,7 @@
         </div>
     </div>
 
+    <script src="./scripts/partials/navbar.js" type="text/javascript"></script>
     <script src="./scripts/generate-product-items.js" type="text/javascript"></script>
 </body>
 </html>
