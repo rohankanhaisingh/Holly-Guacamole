@@ -12,7 +12,7 @@
 
         $isGevalideerd = false;
 
-        die("Connection failed: " . $verbinding->connect_error);
+        die("Verbinding mislukt: " . $verbinding->connect_error);
     } else {
 
         $isGevalideerd = true;
