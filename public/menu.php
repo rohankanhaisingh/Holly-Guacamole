@@ -18,6 +18,8 @@
         $productId = $product["ProductID"];
         $productPrijs = $product["ProductPrijs"];
         $productThumbnail = $product["ProductThumbnail"];
+        $productType = $product["ProductType"];
+
         return "
         <div class='product-container product-item' data-type='$productType' data-id='$productId' data-name='$productNaam' data-price='$productPrijs'>
             <div class='product-item-thumbnail'>
@@ -28,7 +30,10 @@
                 <div class='price'>€" . str_replace(".", ',', (string) $productPrijs). "</div>
             </div>
             <div class='product-item-description'>
-                <span>" . $productOmschrijving . "</span>
+                <span>Geen beschrijving beschikbaar</span>
+            </div>
+            <div class='product-item-tags'>
+                <span>$productType</span>
             </div>
             <div class='product-item-horizontal-line'></div>
             <div class='product-item-optional-description'>
