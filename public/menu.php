@@ -25,16 +25,19 @@
         if(strlen($productOmschrijving) === 0) $productOmschrijving = "Er is geen omschrijving beschikbaar voor dit product.";
 
         return "
-        <div class='product-container product-item' data-type='" . $productThumbnail . "' data-id='" . $productId . "' data-name='" . $productNaam . "' data-price='" . $productPrijs . "'>
+        <div class='product-container product-item' data-type='$productType' data-id='$productId' data-name='$productNaam' data-price='$productPrijs'>
             <div class='product-item-thumbnail'>
-                <img src='./resources/images/gerechten/" . $productThumbnail . "' alt='Zoetzure kip' />
+                <img src='./resources/images/gerechten/$productThumbnail' alt='Zoetzure kip' />
             </div>
             <div class='product-item-title'>
                 <span class='title'>" . $productNaam . "</span>
                 <div class='price'>€" . str_replace(".", ',', (string) $productPrijs). "</div>
             </div>
             <div class='product-item-description'>
-                <span>" . $productOmschrijving . "</span>
+                <span>$productOmschrijving</span>
+            </div>
+            <div class='product-item-tags'>
+                <span>$productType</span>
             </div>
             <div class='product-item-horizontal-line'></div>
             <div class='product-item-optional-description'>
@@ -108,26 +111,26 @@
                     
                     <div class="app-tabs">
 
-                        <div class="tabs-button active"><span>Alle producten</span></div>
+                        <div class="tabs-button active" data-filter-keyword=""><span>Alle producten</span></div>
 
                         <div class="tabs-hl"></div>
 
-                        <div class="tabs-button"><span>Spaanse gerechten</span></div>
-                        <div class="tabs-button"><span>Warme gerechten</span></div>
-                        <div class="tabs-button"><span>Koude gerechten</span></div>
-                        <div class="tabs-button"><span>Vega gerechten</span></div>
+                        <div class="tabs-button" data-filter-keyword="Spaans"><span>Spaanse gerechten</span></div>
+                        <div class="tabs-button" data-filter-keyword="Warm"><span>Warme gerechten</span></div>
+                        <div class="tabs-button" data-filter-keyword="Koud"><span>Koude gerechten</span></div>
+                        <div class="tabs-button" data-filter-keyword="Vega"><span>Vega gerechten</span></div>
 
                         <div class="tabs-hl"></div>
 
-                        <div class="tabs-button"><span>Snacks</span></div>
-                        <div class="tabs-button"><span>Nagerechten</span></div>
-                        <div class="tabs-button"><span>Lunch</span></div>
+                        <div class="tabs-button" data-filter-keyword="Snacks"><span>Snacks</span></div>
+                        <div class="tabs-button" data-filter-keyword="Nagerechten"><span>Nagerechten</span></div>
+                        <div class="tabs-button" data-filter-keyword="Lunch"><span>Lunch</span></div>
 
                         <div class="tabs-hl"></div>
 
-                        <div class="tabs-button"><span>Koude drank</span></div>
-                        <div class="tabs-button"><span>Warme drank</span></div>
-                        <div class="tabs-button"><span>Fris drank</span></div>
+                        <div class="tabs-button" data-filter-keyword="Koude drank"><span>Koude drank</span></div>
+                        <div class="tabs-button" data-filter-keyword="Warme drank"><span>Warme drank</span></div>
+                        <div class="tabs-button" data-filter-keyword="Fris drank"><span>Fris drank</span></div>
 
                         <div class="tabs-hl"></div>
 
@@ -166,5 +169,6 @@
 
     <script src="./scripts/partials/navbar.js" type="text/javascript"></script>
     <script src="./scripts/generate-product-items.js" type="text/javascript"></script>
+    <script src="./scripts/menu.js" type="text/javascript"></script>
 </body>
 </html>

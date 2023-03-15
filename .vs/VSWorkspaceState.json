@@ -1,10 +1,7 @@
 {
   "ExpandedNodes": [
     "",
-    "\\overig",
-    "\\public\\scripts",
-    "\\server"
+    "\\databases"
   ],
-  "SelectedNode": "\\overig\\test.ejs",
   "PreviewInSolutionExplorer": false
 }
