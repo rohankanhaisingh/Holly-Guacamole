@@ -18,12 +18,6 @@
         $productId = $product["ProductID"];
         $productPrijs = $product["ProductPrijs"];
         $productThumbnail = $product["ProductThumbnail"];
-        $productOmschrijving = $product["ProductOmschrijving"];
-        $productType = $product["ProductType"];
-                                    
-
-        if(strlen($productOmschrijving) === 0) $productOmschrijving = "Er is geen omschrijving beschikbaar voor dit product.";
-
         return "
         <div class='product-container product-item' data-type='$productType' data-id='$productId' data-name='$productNaam' data-price='$productPrijs'>
             <div class='product-item-thumbnail'>
@@ -34,10 +28,7 @@
                 <div class='price'>€" . str_replace(".", ',', (string) $productPrijs). "</div>
             </div>
             <div class='product-item-description'>
-                <span>$productOmschrijving</span>
-            </div>
-            <div class='product-item-tags'>
-                <span>$productType</span>
+                <span>" . $productOmschrijving . "</span>
             </div>
             <div class='product-item-horizontal-line'></div>
             <div class='product-item-optional-description'>
