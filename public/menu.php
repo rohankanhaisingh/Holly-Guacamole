@@ -18,8 +18,7 @@
         $productId = $product["ProductID"];
         $productPrijs = $product["ProductPrijs"];
         $productThumbnail = $product["ProductThumbnail"];
-        $productType = $product["ProductType"];
-
+     
         return "
         <div class='product-container product-item' data-type='$productType' data-id='$productId' data-name='$productNaam' data-price='$productPrijs'>
             <div class='product-item-thumbnail'>
