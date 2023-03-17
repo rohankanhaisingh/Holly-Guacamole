@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `bestellingen` (
   PRIMARY KEY (`BestellingID`),
   KEY `fk_bestellingen_tafels` (`TafelID`),
   KEY `fk_bestellingen` (`ProductID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `producten` (
   `ProductThumbnail` text CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL,
   PRIMARY KEY (`ProductID`),
   KEY `fk_SoortProdID` (`SoortProdID`)
-) ENGINE=InnoDB AUTO_INCREMENT=267 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=267 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `producten`
@@ -110,7 +110,7 @@ CREATE TABLE IF NOT EXISTS `soortprod` (
   `SoortProdID` int NOT NULL,
   `SoortProdNaam` text CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL,
   PRIMARY KEY (`SoortProdID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `soortprod`
@@ -141,7 +141,7 @@ CREATE TABLE IF NOT EXISTS `tafels` (
   `TafelID` int NOT NULL AUTO_INCREMENT,
   `Tafelnr` int NOT NULL,
   PRIMARY KEY (`TafelID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Beperkingen voor geëxporteerde tabellen
