@@ -35,10 +35,10 @@
     -o-transition: all .3s ease;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
-    -moz-animation: inherit;
-    -o-animation: inherit;
-    -webkit-animation: inherit;
-    animation: inherit;
+    -moz-animation: product-container-fadein .3s ease;
+    -o-animation: product-container-fadein .3s ease;
+    -webkit-animation: product-container-fadein .3s ease;
+    animation: product-container-fadein .3s ease;
 }
 
     .product-container:hover {
