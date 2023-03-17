@@ -1,7 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\databases"
+    "\\databases",
+    "\\public",
+    "\\public\\resources",
+    "\\public\\resources\\images\\gerechten",
+    "\\public\\scripts",
+    "\\public\\styles",
+    "\\server"
   ],
+  "SelectedNode": "\\databases",
   "PreviewInSolutionExplorer": false
 }
