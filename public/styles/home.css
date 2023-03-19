@@ -2,6 +2,25 @@
     Stylesheet document voor de home pagina.
 */
 
+@keyframes element-fadein {
+    0% {
+        opacity: 0;
+        -moz-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+        -o-transform: translateY(-20px);
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
 .app-background-video {
     width: 100vw;
     height: 100vh;
@@ -101,3 +120,21 @@ h1, h2, h3, h4, h5, h6, p, span, a, li {
         .intro-text .button:active {
             background: #87a920;
         }
+
+
+.can-animate {
+    opacity: 0;
+}
+
+    .can-animate.fade-in {
+        opacity: 1;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        -webkit-transform: none;
+        transform: none;
+        -moz-animation: element-fadein 1s ease;
+        -o-animation: element-fadein 1s ease;
+        -webkit-animation: element-fadein 1s ease;
+        animation: element-fadein 1s ease;
+    }
