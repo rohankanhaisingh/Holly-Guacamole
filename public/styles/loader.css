@@ -1,0 +1,84 @@
+@keyframes avocado-pop {
+    0% {
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        -webkit-transform: none;
+        transform: none;
+    }
+    50% {
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    100% {
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes loader-fadeout {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.app-loader {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    background: #fff;
+    user-select: none !important;
+}
+
+    .app-loader.fadeout {
+        opacity: 0;
+        -moz-animation: loader-fadeout .3s ease;
+        -o-animation: loader-fadeout .3s ease;
+        -webkit-animation: loader-fadeout .3s ease;
+        animation: loader-fadeout .3s ease;
+    }
+
+    .app-loader.hidden {
+        display: none;
+    }
+
+.loader-contents{
+    width: 240px;
+    height: 420px;
+}
+
+.loader-logo {
+    width: 140px;
+    height: 140px;
+    padding: 50px;
+}
+
+    .loader-logo img {
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        -moz-animation: avocado-pop 1s ease infinite;
+        -o-animation: avocado-pop 1s ease infinite;
+        -webkit-animation: avocado-pop 1s ease infinite;
+        animation: avocado-pop 1s ease infinite;
+    }
+
+.loader-text{
+    text-align: center;
+}
+
+    .loader-text span {
+        color: #000 !important;
+    }

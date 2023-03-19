@@ -1,14 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\databases",
     "\\public",
     "\\public\\resources",
     "\\public\\resources\\images\\gerechten",
-    "\\public\\scripts",
+    "\\public\\resources\\video",
     "\\public\\styles",
     "\\server"
   ],
-  "SelectedNode": "\\databases",
+  "SelectedNode": "\\public\\menu.php",
   "PreviewInSolutionExplorer": false
 }
