@@ -16,3 +16,12 @@ a,abbr,acronym,address,applet,b,big,blockquote,body,button,caption,center,cite,c
     .app-layer.app-foreground {
         z-index: 2;
     }
+
+.absolute-centered{
+    width: auto;
+    height: auto;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    z-index: 1;
+}
