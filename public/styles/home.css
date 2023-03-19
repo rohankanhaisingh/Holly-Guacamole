@@ -23,6 +23,7 @@
     padding: 0 30px;
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    display: contents;
 }
 
     .section.first-section {
@@ -48,44 +49,55 @@
     position: relative;
 }
 
-h1, h2, h3, h4, h5, h6, p{
-    font-family: Montserrat;
+h1, h2, h3, h4, h5, h6, p, span, a, li {
+    font-family: Montserrat, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 400;
-    color: #000; 
+    color: #000;
     margin: 0 0 20px 0;
     padding: 0;
-}
-
-/*
-.big-welcome-text {
-    font-size: 54px;
-    font-weight: 700;
-    text-shadow: -5px -5px #87a920;
-    color: #e3f9a1;
-}
-
-.big-intro-text {
-    font-size: 27px;
+    color: #fff !important;
+    text-decoration: none;
 }
 
 .intro-text {
-    font-size: 15px;
-}
-
-.horizontal-line {
-    width: 45%;
-    height: 5px;
-    border-radius: 10px;
-    background-color: #87a920;
-    margin: 30px 0px;
-}
-
-.thumbnail-image {
-    width: 390px;
+    width: 610px;
     height: auto;
-    position: absolute;
-    box-shadow: -10px 10px 0px rgb(122 185 45);
+    margin: 50px auto;
+    text-align: center;
+    display: block;
 }
 
-.thumbnail-2 {top: 120px; left: 120px; }
-.thumbnail-3 {top: 300px; left: 20px;}*/
+    .intro-text h1 {
+        font-size: 42px;
+        font-weight: 900;
+        text-shadow: -5px 5px #586c20;
+    }
+
+    .intro-text .horizontal-line {
+        width: 20%;
+        height: 4px;
+        margin: 40px auto;
+        border-radius: 5px;
+        background: #87a920;
+    }
+
+    .intro-text .button {
+        width: auto;
+        height: auto;
+        margin: 20px auto;
+        border: 2px solid #87a920;
+        padding: 12px 25px;
+        border-radius: 30px;
+        display: inline-block;
+        user-select: none;
+        cursor: pointer;
+        -moz-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+
+        .intro-text .button:hover,
+        .intro-text .button:active {
+            background: #87a920;
+        }
