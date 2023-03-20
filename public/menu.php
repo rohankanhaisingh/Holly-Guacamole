@@ -1,8 +1,8 @@
 ﻿<?php 
-    $serverNaam = "localhost";
-    $gebruikersNaam = "frontend";
-    $wachtwoord = "sussy1234";
-    $databaseNaam = "holly_guacamoly";
+    $serverNaam = "192.168.1.186";
+    $gebruikersNaam = "sussy";
+    $wachtwoord = "nigga1234";
+    $databaseNaam = "hg";
     
     $verbinding = mysqli_connect($serverNaam, $gebruikersNaam, $wachtwoord);
 
