@@ -20,7 +20,7 @@
         $productThumbnail = $product["ProductThumbnail"];
      
         return "
-        <div class='product-container product-item' data-type='$productType' data-id='$productId' data-name='$productNaam' data-price='$productPrijs'>
+        <div class='product-container product-item' data-id='$productId' data-name='$productNaam' data-price='$productPrijs'>
             <div class='product-item-thumbnail'>
                 <img src='./resources/images/gerechten/$productThumbnail' alt='Zoetzure kip' />
             </div>
@@ -32,7 +32,7 @@
                 <span>Geen beschrijving beschikbaar</span>
             </div>
             <div class='product-item-tags'>
-                <span>$productType</span>
+                <span>Bro wat</span>
             </div>
             <div class='product-item-horizontal-line'></div>
             <div class='product-item-optional-description'>
