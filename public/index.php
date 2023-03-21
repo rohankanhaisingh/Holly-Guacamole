@@ -44,26 +44,7 @@
             </div>
             <div class="app-layer app-foreground">
                 <div class="container">
-                    <div class="app-navbar">
-                        <div class="navbar-logo can-animate">
-                            <img src="./resources/images/avocado.png" alt="Logo" />
-                        </div>
-                        <div class="navbar-description can-animate">
-                            <span>Holly Guacamoley</span>
-                        </div>
-                        <div class="navbar-vl"></div>
-                        <ul class="navbar-links">
-                            <li><a href="index.html" class="can-animate">Home pagina</a></li>
-                            <li><a href="/kies-tafel.php" class="can-animate">Kies tafel</a></li>
-                            <li><a href="/help.html" class="can-animate">Help</a></li>
-                            <li><a href="/over.html" class="can-animate">Over</a></li>
-                        </ul>
-                        <div class="navbar-hamburger closed">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </div>
+                    <?php require("includes/nav.html"); ?>
                     <div class="app-content">
                         <div class="container scroller">
                             <div class="section first-section">
@@ -94,7 +75,7 @@
                                         <br />
                                         <br />
                                         <i class="can-animate">Holly-Guacamoley Grenzeloos genieten!</i>
-                                        <a href="./kies-tafel.php">
+                                        <a href="kies-tafel.php">
                                             <div class="button can-animate">
                                                 <span>Kies tafel</span>
                                             </div>

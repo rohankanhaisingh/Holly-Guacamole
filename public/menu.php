@@ -79,29 +79,7 @@
 <body>
     <div class="app">
         <div class="container">
-
-            <div class="app-navbar">
-                <div class="navbar-logo">
-                    <img src="./resources/images/avocado.png" alt="Logo" />
-                </div>
-                <div class="navbar-description">
-                    <span>Interactieve menu</span>
-                </div>
-                <div class="navbar-vl"></div>
-                <ul class="navbar-links">
-                    <li><a href="#">Home pagina</a></li>
-                    <li><a href="#">Geschiedenis</a></li>
-                    <li><a href="#">Help</a></li>
-                    <li><a href="#">Winkelmand</a></li>
-                    <li><a href="#">Mijn account</a></li>
-                </ul>
-                <div class="navbar-hamburger closed">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
-
+            <?php require("includes/nav.html"); ?>
             <div class="app-content">
                 <div class="container">
                     
