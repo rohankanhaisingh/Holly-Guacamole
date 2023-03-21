@@ -18,9 +18,10 @@
         $productId = $product["ProductID"];
         $productPrijs = $product["ProductPrijs"];
         $productThumbnail = $product["ProductThumbnail"];
+        $productSoort = $product["SoortProdNaam"];
      
         return "
-        <div class='product-container product-item' data-id='$productId' data-name='$productNaam' data-price='$productPrijs'>
+        <div class='product-container product-item' data-type='$productSoort' data-id='$productId' data-name='$productNaam' data-price='$productPrijs'>
             <div class='product-item-thumbnail'>
                 <img src='./resources/images/gerechten/$productThumbnail' alt='Zoetzure kip' />
             </div>
@@ -32,7 +33,7 @@
                 <span>Geen beschrijving beschikbaar</span>
             </div>
             <div class='product-item-tags'>
-                <span>Bro wat</span>
+                <span>$productSoort</span>
             </div>
             <div class='product-item-horizontal-line'></div>
             <div class='product-item-optional-description'>
@@ -123,9 +124,9 @@
 
                         <div class="tabs-hl"></div>
 
-                        <div class="tabs-button" data-filter-keyword="Koude drank"><span>Koude drank</span></div>
-                        <div class="tabs-button" data-filter-keyword="Warme drank"><span>Warme drank</span></div>
-                        <div class="tabs-button" data-filter-keyword="Fris drank"><span>Fris drank</span></div>
+                        <div class="tabs-button" data-filter-keyword="Drinken"><span>Koude drank</span></div>
+                        <div class="tabs-button" data-filter-keyword="Drinken"><span>Warme drank</span></div>
+                        <div class="tabs-button" data-filter-keyword="Drinken"><span>Fris drank</span></div>
 
                         <div class="tabs-hl"></div>
 
@@ -141,13 +142,13 @@
 
                             <?php
 
-                            $producten = mysqli_query($verbinding, "SELECT * FROM `producten`");
+                            $producten = mysqli_query($verbinding, "SELECT * FROM producten JOIN soortprod ON producten.SoortProdID = soortprod.SoortProdID LIMIT 0, 25");
                             $aantalProducten = mysqli_num_rows($producten);
 
                             if($aantalProducten > 0) {
 
                                 while($rij = mysqli_fetch_assoc($producten)) {
-                                    
+                                 
                                     echo createProductItem($rij);
                                 }
 
