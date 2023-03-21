@@ -13,9 +13,9 @@ a,abbr,acronym,address,applet,b,big,blockquote,body,button,caption,center,cite,c
     z-index: 1;
 }
 
-    .app-layer.app-foreground {
-        z-index: 2;
-    }
+.app-layer.app-foreground {
+    z-index: 2;
+}
 
 .absolute-centered{
     width: auto;
