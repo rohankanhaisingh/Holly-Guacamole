@@ -33,11 +33,11 @@
                 </div>
                 <div class="navbar-vl"></div>
                 <ul class="navbar-links">
-                    <li><a href="#">Home pagina</a></li>
-                    <li><a href="#">Geschiedenis</a></li>
-                    <li><a href="#">Help</a></li>
-                    <li><a href="#">Winkelmand</a></li>
-                    <li><a href="#">Mijn account</a></li>
+                    <li><a href="index.php">Home pagina</a></li>
+                    <li><a href="">Geschiedenis</a></li>
+                    <li><a href="help.php">Help</a></li>
+                    <li><a href="winkelmand.php">Winkelmand</a></li>
+                    <li><a href="account.php">Mijn account</a></li>
                 </ul>
                 <div class="navbar-hamburger closed">
                     <div></div>
