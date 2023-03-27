@@ -1,5 +1,5 @@
 <?php
-$serverNaam = "192.168.1.186";
+    $serverNaam = "192.168.1.186";
     $gebruikersNaam = "sussy";
     $wachtwoord = "nigga1234";
     $databaseNaam = "hg";
@@ -19,7 +19,7 @@ $serverNaam = "192.168.1.186";
         $productPrijs = $product["ProductPrijs"];
         $productThumbnail = $product["ProductThumbnail"];
         $productSoort = $product["SoortProdNaam"];
-     
+        
         return "
         <div class='product-container product-item' data-type='$productSoort' data-id='$productId' data-name='$productNaam' data-price='$productPrijs'>
             <div class='product-item-thumbnail'>
@@ -27,7 +27,7 @@ $serverNaam = "192.168.1.186";
             </div>
             <div class='product-item-title'>
                 <span class='title'>" . $productNaam . "</span>
-                <div class='price'>€" . str_replace(".", ',', (string) $productPrijs). "</div>
+                <div class='price'>&euro;" . str_replace(".", ',', (string) $productPrijs). "</div>
             </div>
             <div class='product-item-description'>
                 <span>Geen beschrijving beschikbaar</span>
