@@ -68,6 +68,7 @@
     float: left;
     margin: 17px 0 0 0;
     padding: 0;
+    z-index: 10;
 }
 
     .navbar-links li {
@@ -88,19 +89,23 @@
             user-select: none;
         }
 
-            .navbar-links li a:before,
-            .navbar-links li a:after {
-                position: absolute;
+        .navbar-links li a img {
+            filter: invert(100%);
+            z-index: 9;
+            height: 14px;
+            padding: 0;
+            margin: 0;
+            position: relative;
+        }
+
+            .navbar-links li:not(:nth-last-child(1)) a:before {
+                width: 10px;
+                height: 4px;
                 content: "";
                 -moz-transition: all .3s ease;
                 -o-transition: all .3s ease;
                 -webkit-transition: all .3s ease;
                 transition: all .3s ease;
-            }
-
-            .navbar-links li a:before {
-                width: 10px;
-                height: 4px;
                 position: absolute;
                 bottom: 0;
                 right: 0;
@@ -110,8 +115,41 @@
                 background: #87a920;
             }
 
-            .navbar-links li a:hover:before {
+            .navbar-links li:not(:nth-last-child(1)) a:hover:before {
                 width: 100%;
+            }
+
+            .navbar-links li:nth-last-child(1) a:before, .navbar-links li:nth-last-child(1) a::after {
+                content: "";
+                width: 9px;
+                height: 23px;
+                border: 5px solid #87a920;
+                z-index: 8;
+                -moz-transition: all .3s ease;
+                -o-transition: all .3s ease;
+                -webkit-transition: all .3s ease;
+                transition: all .3s ease;
+                position: absolute;
+                bottom: 0;
+                margin: auto;
+                background: transparent;
+                top: -7px;
+            }
+
+            .navbar-links li:nth-last-child(1) a:before{
+                left: 5px;
+                border-right: 5px solid transparent;
+                border-radius: 14px 0 0 14px;
+            }
+
+            .navbar-links li:nth-last-child(1) a::after{
+                right: 5px;
+                border-left: 5px solid transparent;
+                border-radius: 0 14px 14px 0;
+            }
+
+            .navbar-links li:nth-last-child(1) a:hover:before {
+                height: 23px;
             }
 
     .navbar-links.hidden {
