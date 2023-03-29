@@ -43,8 +43,7 @@
 		button.addEventListener("click", function () {
 
 			const allProducts = productsContainer.querySelectorAll(".product-item");
-			const visibleProducts = [];
-
+			
 			tabButtons.forEach(btn => btn.classList.remove("active"));
 
 			if (!button.classList.contains("active"))
