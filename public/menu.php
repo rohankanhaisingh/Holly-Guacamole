@@ -1,5 +1,5 @@
 ﻿<?php 
-    require 'connection.php'
+    require('connection.php');
 ?>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -63,8 +63,7 @@
                         <div class="products-grid-container">
 
                             <?php
-                            require 'products.php';                            
-                            require 'bestellingen.php';
+                                require('products.php'); 
                             ?>
                         </div> 
                     </div>
