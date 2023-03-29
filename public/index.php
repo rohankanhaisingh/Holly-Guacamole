@@ -15,8 +15,9 @@
     <link href="./styles/index.css" rel="stylesheet" type="text/css"/>
     <link href="./styles/navbar.css" rel="stylesheet" type="text/css"/>
     <link href="./styles/tabs.css" rel="stylesheet" type="text/css"/>
-    <link href="./styles/home.css" rel="stylesheet" type="text/css"/>
     <link href="./styles/loader.css" rel="stylesheet" type="text/css"/>
+
+    <link href="./styles/pages/home.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     <div class="app">
