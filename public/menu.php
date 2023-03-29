@@ -63,7 +63,7 @@
                         <div class="products-grid-container">
 
                             <?php
-                                require('products.php');
+                                require('products.php'); 
                             ?>
                         </div> 
                     </div>
