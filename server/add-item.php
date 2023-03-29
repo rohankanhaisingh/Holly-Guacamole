@@ -1,4 +1,10 @@
 <?php
+    /*
+        Dit document word gebruikt om POST requests te handelen.
+        
+        Als eerst word er een verbinding gemaakt met de database.
+        Vervolgens word er een verbinding gemaakt met een tabel, in de database.
+    */
 
     $serverNaam = "192.168.1.186";
     $gebruikersNaam = "sussy";
@@ -16,6 +22,7 @@
 	$content = trim(file_get_contents("php://input"));
 	$decodedArray = json_decode($content, true);
 
+    $timestamp = $decodedArray["timestamp"];
 	$productName = $decodedArray["productName"];
 	$productId = $decodedArray["productId"];
 	$productType = $decodedArray["productType"];
@@ -25,4 +32,5 @@
 
     mysqli_query($verbinding, $query);
 
+    echo '{"status": "ok"}';
 ?>
