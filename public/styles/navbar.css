@@ -121,36 +121,50 @@
 
             .navbar-links li:nth-last-child(1) a:before, .navbar-links li:nth-last-child(1) a::after {
                 content: "";
-                width: 9px;
-                height: 23px;
-                border: 5px solid #87a920;
+                width: 0px;
+                height: 0px;
+                border: 0px solid #87a920;
                 z-index: 8;
-                -moz-transition: all .3s ease;
-                -o-transition: all .3s ease;
-                -webkit-transition: all .3s ease;
-                transition: all .3s ease;
+                -moz-transition: width .3s ease;
+                -o-transition: width .3s ease;
+                -webkit-transition: width .3s ease;
+                transition: width .3s ease;
                 position: absolute;
-                bottom: 0;
                 margin: auto;
                 background: transparent;
-                top: -7px;
+            }
+            
+            .navbar-links li:nth-last-child(1) a:before {
+                left: 6px;
+                bottom: 4px;
+                transition: border 0.3s ease,
+                height 0.1s ease;
+                transition-delay: 0.3s;
             }
 
-            .navbar-links li:nth-last-child(1) a:before{
-                left: 5px;
-                border-right: 5px solid transparent;
-                border-radius: 14px 0 0 14px;
+            .navbar-links li:nth-last-child(1) a::after{ 
+                right: 6px;
+                top: 0;
             }
 
-            .navbar-links li:nth-last-child(1) a::after{
-                right: 5px;
-                border-left: 5px solid transparent;
-                border-radius: 0 14px 14px 0;
+            .navbar-links li:nth-last-child(1) a:hover:before, .navbar-links li:nth-last-child(1) a:hover::after {
+                height: 24px;
+                border: 4px solid transparent;
+                width: 14px;
             }
-
+            
             .navbar-links li:nth-last-child(1) a:hover:before {
-                height: 23px;
+                border-radius: 20px 0 0 20px;
+                border-color: #87a920;
+                border-right: 0px solid transparent;
             }
+
+            .navbar-links li:nth-last-child(1) a:hover::after{
+                border-radius: 0 20px 20px 0;
+                border-color: #87a920;
+                border-left: 0px solid transparent;
+            }
+
 
     .navbar-links.hidden {
         display: none;
