@@ -1,4 +1,3 @@
-<?php
 	function generateProductItem(itemName, itemThumbnail, itemPrice, itemDescription, itemOptionalDescription) {
 	productsGridContainer.innerHTML += 
 		<div class="product-container product-item">
@@ -19,7 +18,6 @@
             <div class="product-item-buttons">
                 <button class="product-item-buttons-button">
                     <img src="./resources/icons/icon-add.png" alt="Voeg product toe aan winkelmand" />
-                    
                 </button>
                 <div class="product-item-buttons-button">
                     <img src="./resources/icons/icon-compare.png" alt="Vergelijk product met een ander" />
@@ -32,6 +30,12 @@
                 </div>
             </div>
         </div>
-	;
+    ;`
+}
+function insertBestelRegel() {
+    // Voer hier de SQL-query uit om de bestelregel in te voegen in de database 
+        $query = "INSERT INTO bestelregel (Product, Aantal, BestellingID, ProductID, IsVerwerkt) SELECT '', '1', BestellingID, '', '0' FROM bestelling WHERE BestellingID = '';";
+        mysqli_query($connection, $query);
+    alert('Bestelling is gelukt');
 }
 ?>
