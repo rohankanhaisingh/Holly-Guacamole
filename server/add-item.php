@@ -6,7 +6,8 @@
         Vervolgens word er een verbinding gemaakt met een tabel, in de database.
     */
 
-    $serverNaam = "192.168.1.186";
+    // $serverNaam = "192.168.1.186";
+    $serverNaam = "localhost";
     $gebruikersNaam = "sussy";
     $wachtwoord = "nigga1234";
     $databaseNaam = "hg";
@@ -28,7 +29,7 @@
 	$productType = $decodedArray["productType"];
 	$productType = $decodedArray["timestamp"];
 
-	$query = "INSERT INTO bestelregel(Product, Aantal, ProductID, IsVerwerkt) VALUES ('$productName', 1, $productId, 0)";
+	$query = "INSERT INTO bestelregel(Product, Aantal, ProductID, IsVerwerkt, Tijdstempel) VALUES ('$productName', 1, $productId, 0, $timestamp)";
 
     mysqli_query($verbinding, $query);
 
