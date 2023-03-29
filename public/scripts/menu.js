@@ -1,7 +1,38 @@
 (function () {
 
-	const tabButtons = document.querySelectorAll(".tabs-button");
-	const productsContainer = document.querySelector(".products-grid-container");
+	const tabButtons = document.querySelectorAll(".tabs-button"),
+		productsContainer = document.querySelector(".products-grid-container"),
+		productItems = document.querySelectorAll(".product-item");
+
+	productItems.forEach(function (product) {
+
+		const addButton = product.querySelector(".product-item-buttons-button[data-action='add-item']");
+
+		addButton.addEventListener("click", async function () {
+
+			const data = {
+				timestamp: Date.now(),
+				text: "yoooo wtf, dit werkt??"
+			};
+
+			const xhr = new XMLHttpRequest();
+
+			xhr.addEventListener("readystatechange", function () {
+
+				if (this.readyState === 4) {
+
+					if (this.status == 200) {
+
+						console.log("Product toegevoegd");
+					}
+				}
+			});
+
+			xhr.open("POST", "/server/add-item.php");
+			xhr.send(JSON.stringify(data));
+
+		});
+	});
 
 	tabButtons.forEach(function (button) {
 
