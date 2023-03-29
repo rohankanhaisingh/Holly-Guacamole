@@ -12,7 +12,9 @@
 
 			const data = {
 				timestamp: Date.now(),
-				text: "yoooo wtf, dit werkt??"
+				productName: product.getAttribute("data-name"),
+				productId: product.getAttribute("data-id"),
+				productType: product.getAttribute("data-type")
 			};
 
 			const xhr = new XMLHttpRequest();
