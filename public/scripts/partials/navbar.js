@@ -1,3 +1,7 @@
+/*
+	Controller script voor de navigatie balk.
+*/
+
 (function () {
 
 	/**@type {HTMLDivElement}*/
@@ -11,8 +15,11 @@
 
 	hamburger.addEventListener("click", function () {
 
+		// Indien de breedte van het scherm groter is dan 
+		// 1200 pixels, word de code hieronder niet uitgevoerd.
 		if (window.innerWidth >= 1200) return;
 
+		// Simpele schakelaar om de dropdown te weergeven.
 		if (this.classList.contains("closed")) {
 
 			this.classList.remove("closed");
