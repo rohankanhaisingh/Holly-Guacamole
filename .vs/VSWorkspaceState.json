@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\databases",
+    "\\public",
+    "\\server"
   ],
+  "SelectedNode": "\\public\\products.php",
   "PreviewInSolutionExplorer": false
 }
