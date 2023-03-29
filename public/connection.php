@@ -40,16 +40,16 @@
                 <span>Je kunt een keuze maken uit: er zijn momenteel geen keuzes beschikbaar voor dit product. Misschien zijn er later keuzes beschikbaar, wie weet.</span>
             </div>
             <div class='product-item-buttons'>
-                <div class='product-item-buttons-button'>
+                <div class='product-item-buttons-button' data-action='add-item'>
                     <img src='./resources/icons/icon-add.png' alt='Voeg product toe aan winkelmand' />
                 </div>
-                <div class='product-item-buttons-button'>
+                <div class='product-item-buttons-button' data-action='compare-item'>
                     <img src='./resources/icons/icon-compare.png' alt='Vergelijk product met een ander' />
                 </div>
-                <div class='product-item-buttons-button'>
+                <div class='product-item-buttons-button' data-action='configurate-item'>
                     <img src='./resources/icons/icon-slider.png' alt='Product samenstellen' />
                 </div>
-                <div class='product-item-buttons-button'>
+                <div class='product-item-buttons-button' data-action='item-info'>
                     <img src='./resources/icons/icon-info.png' alt='Product informatie' />
                 </div>
             </div>
