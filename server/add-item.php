@@ -6,8 +6,7 @@
         Vervolgens word er een verbinding gemaakt met een tabel, in de database.
     */
 
-    // $serverNaam = "192.168.1.186";
-    $serverNaam = "localhost";
+    $serverNaam = "192.168.1.186";
     $gebruikersNaam = "sussy";
     $wachtwoord = "nigga1234";
     $databaseNaam = "hg";
