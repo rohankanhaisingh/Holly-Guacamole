@@ -78,6 +78,15 @@ h1, h2, h3, h4, h5, h6, p, span, a, li {
     text-decoration: none;
 }
 
+.navbar-links li a img {
+    filter: invert(100%);
+    z-index: 9;
+    height: 14px;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
 .intro-text {
     width: 610px;
     height: auto;
