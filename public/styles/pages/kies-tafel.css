@@ -1,0 +1,142 @@
+.container.scroller {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.app-table-container {
+    width: calc(100% - 60px);
+    height: auto;
+    display: grid;
+    padding: 0 30px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.app-table-item {
+    height: 390px;
+    position: relative;
+    content: "";
+    border-radius: 5px;
+    overflow: hidden;
+    user-select: none;
+    cursor: pointer;
+    box-shadow: -5px 10px 10px rgb(0 0 0 / 0%);
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+    .app-table-item .background,
+    .app-table-item .foreground {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        overflow: hidden;
+
+    }
+
+    .app-table-item .background { z-index: 1; }
+    .app-table-item .foreground { z-index: 2; }
+
+    .app-table-item .background img {
+        height: 100%;
+        width: auto;
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        -moz-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+
+    .app-table-item.unavailable .background img {
+        -moz-filter: grayscale(100%);
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
+
+    .app-table-item .foreground {
+        background: linear-gradient(to bottom, #fff, rgb(255 255 255 / 70%), transparent);
+    }
+
+    .app-table-item .foreground .container {
+        width: calc(100% - 40px);
+        height: calc(100% - 40px);
+        padding: 20px;
+    }
+
+        .app-table-item .foreground .title,
+        .app-table-item .foreground .space,
+        .app-table-item .foreground .description {
+            font-family: Montserrat, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: #000;
+            font-size: 13px;
+        }
+
+        .app-table-item .foreground .title {
+            font-size: 40px;
+        }
+
+        .app-table-item .foreground .space {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .app-table-item .foreground .horizontal-line {
+            width: 40%;
+            height: 2px;
+            background: #6a6a6a;
+            border-radius: 5px;
+            margin: 10px 0 20px 0;
+        }
+
+        .app-table-item .foreground .status {
+            width: auto;
+            height: auto;
+            display: inline-block;
+            background: none;
+            padding: 7px 16px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+            .app-table-item .foreground .status.available {
+                background: #87a920;
+            }
+
+            .app-table-item .foreground .status.unavailable {
+                background: #ff4b4b;
+            }
+
+            .app-table-item .foreground .status span {
+                font-family: Montserrat, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 11px;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: #fff;
+            }
+
+
+
+    .app-table-item:hover {
+        box-shadow: -5px 10px 10px rgb(0 0 0 / 30%);
+        -moz-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+        -o-transform: translateY(-5px);
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
+
+        .app-table-item:hover .background img {
+            -moz-transform: scale(1.2) translateY(-10px);
+            -ms-transform: scale(1.2) translateY(-10px);
+            -o-transform: scale(1.2) translateY(-10px);
+            -webkit-transform: scale(1.2) translateY(-10px);
+            transform: scale(1.2) translateY(-10px);
+        }
