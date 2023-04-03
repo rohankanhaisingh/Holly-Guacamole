@@ -39,29 +39,9 @@
 <body>
     <div class="app">
         <div class="container">
-            
-            <div class="app-navbar">
-	            <div class="navbar-logo can-animate">
-		            <img src="./resources/images/avocado.png" alt="Logo" />
-	            </div>
-	            <div class="navbar-description can-animate">
-		            <span>Selecteer een tafel</span>
-	            </div>
-	            <div class="navbar-vl"></div>
-	            <ul class="navbar-links">
-		            <li><a href="/public/index.php" class="can-animate">Home pagina</a></li>
-		            <li><a href="/public/menu.php" class="can-animate">Menu</a></li>
-		            <li><a href="/public/help.php" class="can-animate">Help</a></li>
-		            <li><a href="/public/overons.php" class="can-animate">Over ons</a></li>
-		            <li><a href="/public/winkelwagen.php" class="can-animate"><img src="./resources/icons/cart-shopping-solid.svg" alt="Winkelwagen"></a></li>
-	            </ul>
-	            <div class="navbar-hamburger closed">
-		            <div></div>
-		            <div></div>
-		            <div></div>
-	            </div>
-            </div>
-
+            <?php
+            require("./includes/nav.html");
+            ?>
             <div class="app-content">
                 <div class="container scroller">
                     <div class="app-table-container">
