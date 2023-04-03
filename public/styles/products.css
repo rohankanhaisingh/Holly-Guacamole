@@ -80,8 +80,8 @@
     width: 100%;
     height: auto;
     margin: 10px 0px;
-    display: grid;
-    grid-template-columns: 70% 30%;
+    display: flex;
+    justify-content: space-between;
 }
 
     .product-item-title .title,
