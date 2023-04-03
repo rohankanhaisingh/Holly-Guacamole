@@ -2,8 +2,24 @@
 
 	const tabButtons = document.querySelectorAll(".tabs-button"),
 		productsContainer = document.querySelector(".products-grid-container"),
-		productItems = document.querySelectorAll(".product-item");
+		productItems = document.querySelectorAll(".product-item"),
+		currentUrl = new URL(location.href),
+		navbarTitle = document.querySelector(".navbar-description span");
 
+	const searchParams = currentUrl.search.replace("?", "").split("&"),
+		parsedParams = {};
+
+	searchParams.forEach(function (param) {
+
+		const seperator = param.split("=");
+
+		parsedParams[seperator[0]] = seperator[1];
+	});
+
+	if (typeof parsedParams["tafel"] === "undefined") return alert(`Tafel is niet geregistreerd.`);
+
+	navbarTitle.innerText = `Tafel ${parsedParams.tafel}`;
+	
 	productItems.forEach(function (product) {
 
 		const addButton = product.querySelector(".product-item-buttons-button[data-action='add-item']");
