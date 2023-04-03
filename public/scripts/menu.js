@@ -30,7 +30,7 @@
 				}
 			});
 
-			xhr.open("POST", "/server/add-item.php");
+			xhr.open("POST", "../server/add-item.php");
 			xhr.send(JSON.stringify(data));
 
 		});
