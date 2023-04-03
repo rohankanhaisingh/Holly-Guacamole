@@ -91,6 +91,7 @@
                                 $beschikbaarHeidTekst = $tafelBeschikbaarheid == 0 ? "Momenteel beschikbaar" : "Niet beschikbaar";
                                 $beschikbaarHeidStijl = $tafelBeschikbaarheid == 0 ? "available" : "unavailable";
                                 echo "
+                                <a href='./menu.php?tafel=$tafelNummer'>
                                     <div class='app-table-item $beschikbaarHeidStijl'>
                                         <div class='background'>
                                             <img src='/public/resources/images/achtergronden/$tafelAfbeelding' alt='Jaman' />
@@ -109,6 +110,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                </a>
                                 ";
                             }
 
