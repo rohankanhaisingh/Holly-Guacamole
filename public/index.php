@@ -48,7 +48,26 @@
 
             <div class="app-layer app-foreground">
                 <div class="container">
-                    <?php require("includes/nav.html"); ?>
+                   
+                    <div class="app-navbar">
+	                    <div class="navbar-logo can-animate">
+		                    <img src="./resources/images/avocado.png" alt="Logo" />
+	                    </div>
+	                    <div class="navbar-description can-animate">
+		                    <span>Holly Guacamoley</span>
+	                    </div>
+	                    <div class="navbar-vl"></div>
+	                    <ul class="navbar-links">
+		                    <li><a href="./help.html" class="can-animate">Help</a></li>
+		                    <li><a href="./overons.html" class="can-animate">Over ons</a></li>
+	                    </ul>
+	                    <div class="navbar-hamburger closed">
+		                    <div></div>
+		                    <div></div>
+		                    <div></div>
+	                    </div>
+                    </div>
+
                     <div class="app-content">
                         <div class="container scroller">
 
