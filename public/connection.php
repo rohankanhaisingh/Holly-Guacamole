@@ -20,14 +20,14 @@
         $productThumbnail = $product["ProductThumbnail"];
         $productSoort = $product["SoortProdNaam"];
         
-        return "
+        $html = <<<HTML
         <div class='product-container product-item' data-type='$productSoort' data-id='$productId' data-name='$productNaam' data-price='$productPrijs'>
             <div class='product-item-thumbnail'>
                 <img src='./resources/images/gerechten/$productThumbnail' alt='Zoetzure kip' />
             </div>
             <div class='product-item-title'>
-                <span class='title'>" . $productNaam . "</span>
-                <div class='price'>&euro;" . str_replace(".", ',', (string) $productPrijs). "</div>
+                <span class='title'>$productNaam</span>
+                <div class='price'>&euro;$productPrijs</div>
             </div>
             <div class='product-item-description'>
                 <span>Geen beschrijving beschikbaar</span>
@@ -54,6 +54,7 @@
                 </div>
             </div>
         </div>
-        ";
+        HTML;
+        return $html;
     }
 ?>
