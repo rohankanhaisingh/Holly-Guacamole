@@ -1,5 +1,5 @@
 ﻿<?php
-
+    session_Start();
     $serverNaam = "192.168.1.186";
     $gebruikersNaam = "sussy";
     $wachtwoord = "nigga1234";
@@ -50,6 +50,8 @@
 
                         $tafels = mysqli_query($verbinding, "SELECT `TafelNummer`, `IsBeschikbaar`, `TafelGrootte`, `TafelBestellingen` FROM `tafels`;");
                         $aantalTafels = mysqli_num_rows($tafels);
+                        // toevoegen data aan de sessie
+                        $_SESSION[$tafelNummer];
 
                         $afbeeldingen = [
                             "epic-bloemen.jpeg",
@@ -67,6 +69,15 @@
                                 $tafelBeschikbaarheid = $tafel["IsBeschikbaar"];
 
                                 $tafelAfbeelding = $afbeeldingen[array_rand($afbeeldingen)];
+                                // tafel updaten in database
+                                
+                                $result = mysqli_query($verbinding, "SELECT IsBeschikbaar FROM `tafels`");
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    if ($row['IsBeschikbaar'] == 0) {
+                                        mysqli_query($verbinding, "UPDATE tafels SET IsBeschikbaar='1' WHERE TafelNummer = $tafelNummer");
+                                    }
+                                }
+                        
 
                                 $beschikbaarHeidTekst = $tafelBeschikbaarheid == 0 ? "Momenteel beschikbaar" : "Niet beschikbaar";
                                 $beschikbaarHeidStijl = $tafelBeschikbaarheid == 0 ? "available" : "unavailable";

@@ -1,6 +1,14 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\overig",
+    "\\public",
+    "\\public\\includes",
+    "\\public\\resources\\images",
+    "\\public\\resources\\images\\achtergronden",
+    "\\public\\scripts",
+    "\\public\\styles\\pages"
   ],
+  "SelectedNode": "\\public\\includes\\nav.html",
   "PreviewInSolutionExplorer": false
 }
