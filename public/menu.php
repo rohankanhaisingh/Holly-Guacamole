@@ -58,7 +58,7 @@
                         <div class="tabs-button"><span>Instellingen</span></div>
 
                     </div>
-
+                    
                     <div class="app-products">
                         <div class="products-grid-container">
 

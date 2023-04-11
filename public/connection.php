@@ -40,7 +40,7 @@
                 <span>Je kunt een keuze maken uit: er zijn momenteel geen keuzes beschikbaar voor dit product. Misschien zijn er later keuzes beschikbaar, wie weet.</span>
             </div>
             <div class='product-item-buttons'>
-                <div class='product-item-buttons-button' data-action='add-item'>
+                <div class='product-item-buttons-button button-add-item' data-action='add-item'>
                     <div class='hover_popup'>Voegt een product toe aan uw bestelling.</div>
                     <div class='ordered_popup'>$productNaam is toegevoegd aan uw bestelling.</div>
                     <img src='./resources/icons/icon-add.png' alt='Voeg product toe aan winkelmand' />
