@@ -1,5 +1,5 @@
 ﻿<?php
-    session_Start();
+    session_start();
     $serverNaam = "192.168.1.186";
     $gebruikersNaam = "sussy";
     $wachtwoord = "nigga1234";
@@ -51,8 +51,7 @@
                         $tafels = mysqli_query($verbinding, "SELECT `TafelNummer`, `IsBeschikbaar`, `TafelGrootte`, `TafelBestellingen` FROM `tafels`;");
                         $aantalTafels = mysqli_num_rows($tafels);
                         // toevoegen data aan de sessie
-                        $_SESSION[$tafelNummer];
-
+                        
                         $afbeeldingen = [
                             "epic-bloemen.jpeg",
                             "tafel-ding.jpeg",
@@ -60,12 +59,13 @@
                             "glasofzo.webp",
                             "biieer.webp",
                         ];
-
+                        
                         if($aantalTafels > 0) {
-
+                            
                             while($tafel = mysqli_fetch_assoc($tafels)) {
-                                    
+                                
                                 $tafelNummer = $tafel["TafelNummer"];
+                                $_SESSION['tafelNummerSession'] = $tafelNummer;
                                 $tafelBeschikbaarheid = $tafel["IsBeschikbaar"];
 
                                 $tafelAfbeelding = $afbeeldingen[array_rand($afbeeldingen)];
