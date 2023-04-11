@@ -50,8 +50,6 @@
 
                         $tafels = mysqli_query($verbinding, "SELECT `TafelNummer`, `IsBeschikbaar`, `TafelGrootte`, `TafelBestellingen` FROM `tafels`;");
                         $aantalTafels = mysqli_num_rows($tafels);
-                        // toevoegen data aan de sessie
-                        $_SESSION[$tafelNummer];
 
                         $afbeeldingen = [
                             "epic-bloemen.jpeg",
@@ -72,17 +70,13 @@
                                 // tafel updaten in database
                                 
                                 $result = mysqli_query($verbinding, "SELECT IsBeschikbaar FROM `tafels`");
-                                while ($row = mysqli_fetch_assoc($result)) {
-                                    if ($row['IsBeschikbaar'] == 0) {
-                                        mysqli_query($verbinding, "UPDATE tafels SET IsBeschikbaar='1' WHERE TafelNummer = $tafelNummer");
-                                    }
-                                }
-                        
+                       
+                                $beschikbaarHeidTekst = $tafelBeschikbaarheid == 0 ? "Niet beschikbaar" : "Momenteel beschikbaar";
+                                $beschikbaarHeidStijl = $tafelBeschikbaarheid == 0 ? "unavailable" : "available";
+                                $beschikbaarHeidHref =  $tafelBeschikbaarheid == 0 ? "#" : "./menu.php?tafel=$tafelNummer";
 
-                                $beschikbaarHeidTekst = $tafelBeschikbaarheid == 0 ? "Momenteel beschikbaar" : "Niet beschikbaar";
-                                $beschikbaarHeidStijl = $tafelBeschikbaarheid == 0 ? "available" : "unavailable";
                                 echo "
-                                <a href='./menu.php?tafel=$tafelNummer'>
+                                <a href='$beschikbaarHeidHref'>
                                     <div class='app-table-item $beschikbaarHeidStijl'>
                                         <div class='background'>
                                             <img src='/public/resources/images/achtergronden/$tafelAfbeelding' alt='Jaman' />

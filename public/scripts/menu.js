@@ -16,8 +16,32 @@
 		parsedParams[seperator[0]] = seperator[1];
 	});
 
-	if (typeof parsedParams["tafel"] === "undefined") return alert(`Tafel is niet geregistreerd.`);
+	function postData(url, data) {
 
+		const xhr = new XMLHttpRequest();
+
+		xhr.addEventListener("readystatechange", function (e) {
+
+			if (this.readyState === 4) {
+
+				if (this.status === 200) {
+
+					console.log("POST event is succesvol gelukt.");
+					console.log(this.responseText);
+				}
+			}
+		});
+
+		xhr.open("POST", url);
+		xhr.send(JSON.stringify(data));
+	}
+
+	postData("../server/register-table.php", {
+		tableNumber: parsedParams["tafel"],
+		timestamp: Date.now()
+	});
+
+	if (typeof parsedParams["tafel"] === "undefined") return alert(`Tafel is niet geregistreerd.`);
 	navbarTitle.innerText = `Tafel ${parsedParams.tafel}`;
 
 	productItems.forEach(function (product) {
@@ -26,32 +50,14 @@
 
 		addButton.addEventListener("click", async function () {
 
-			const data = {
+			postData("../server/add-item.php", {
 				timestamp: Date.now(),
 				productName: product.getAttribute("data-name"),
 				productId: product.getAttribute("data-id"),
 				productType: product.getAttribute("data-type")
-			};
-
-			const xhr = new XMLHttpRequest();
-
-			xhr.addEventListener("readystatechange", function () {
-
-				if (this.readyState === 4) {
-
-					if (this.status == 200) {
-
-						console.log("Product toegevoegd");
-					}
-				}
 			});
-
-			xhr.open("POST", "../server/add-item.php");
-			xhr.send(JSON.stringify(data));
-
 		});
 	});
-
 	tabButtons.forEach(function (button) {
 
 		const buttonFilterKeyword = button.getAttribute("data-filter-keyword");
