@@ -209,6 +209,12 @@
     }
 }
 
+@media screen and (max-width: 1000px) {
+    .products-grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 /* #endregion media */
 
 /* #region add item popup */
