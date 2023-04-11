@@ -210,4 +210,16 @@
 /* #endregion @media */
 
 /* #region add item popup */
+.product-item-buttons .hover_popup,.product-item-buttons .ordered_popup{
+    background-color: #fff;
+    border: 1px solid black;
+    position: absolute;
+    bottom: 40px;
+    left: 5px;
+    visibility: hidden;
+    transition: visibility 250ms;
+}
+.product-item-buttons .hover_popup{
+    visibility: visible;
+}
 /* #endregion add item popup */

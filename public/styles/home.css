@@ -1,0 +1,140 @@
+/*
+    Stylesheet document voor de home pagina.
+*/
+
+@keyframes element-fadein {
+    0% {
+        opacity: 0;
+        -moz-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+        -o-transform: translateY(-20px);
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.app-background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: fill;
+}
+
+.app-navbar {
+    background: none;
+}
+
+.container.scroller {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.section {
+    width: calc(100% - 60px);
+    height: 100vh;
+    padding: 0 30px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: contents;
+}
+
+    .section.first-section {
+        height: calc(100vh - var(--navbar-height));
+    }
+
+.welcome-container {
+    width: calc(100% - 100px);
+    height: auto;
+    min-height: 120px;
+    padding: 0 50px;
+}
+
+.welcome-container.grid {
+    display: grid;
+    grid-template-columns: auto 35vw;
+    gap: 20px
+}
+
+.welcome-container .inline-grid {
+    display: inline-block;
+    padding: 20px;
+    position: relative;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a, li {
+    font-family: Montserrat, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    color: #000;
+    margin: 0 0 20px 0;
+    padding: 0;
+    color: #fff !important;
+    text-decoration: none;
+}
+
+.intro-text {
+    width: 610px;
+    height: auto;
+    margin: 50px auto;
+    text-align: center;
+    display: block;
+}
+
+    .intro-text h1 {
+        font-size: 42px;
+        font-weight: 900;
+        text-shadow: -5px 5px #586c20;
+    }
+
+    .intro-text .horizontal-line {
+        width: 20%;
+        height: 4px;
+        margin: 40px auto;
+        border-radius: 5px;
+        background: #87a920;
+    }
+
+    .intro-text .button {
+        width: auto;
+        height: auto;
+        margin: 20px auto;
+        border: 2px solid #87a920;
+        padding: 12px 25px;
+        border-radius: 30px;
+        display: inline-block;
+        user-select: none;
+        cursor: pointer;
+        -moz-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+
+        .intro-text .button:hover,
+        .intro-text .button:active {
+            background: #87a920;
+        }
+
+
+.can-animate {
+    opacity: 0;
+}
+
+    .can-animate.fade-in {
+        opacity: 1;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        -webkit-transform: none;
+        transform: none;
+        -moz-animation: element-fadein 1s ease;
+        -o-animation: element-fadein 1s ease;
+        -webkit-animation: element-fadein 1s ease;
+        animation: element-fadein 1s ease;
+    }
