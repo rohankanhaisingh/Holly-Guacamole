@@ -50,12 +50,8 @@
 
                         $tafels = mysqli_query($verbinding, "SELECT `TafelNummer`, `IsBeschikbaar`, `TafelGrootte`, `TafelBestellingen` FROM `tafels`;");
                         $aantalTafels = mysqli_num_rows($tafels);
-<<<<<<< HEAD
 
-=======
                         // toevoegen data aan de sessie
-                        
->>>>>>> Bart
                         $afbeeldingen = [
                             "epic-bloemen.jpeg",
                             "tafel-ding.jpeg",
